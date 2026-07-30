@@ -1,0 +1,268 @@
+/* RESET */
+
+*, *::before, *::after{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+}
+
+input, button{
+    font: inherit;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+/* VARIABLES GLOBALES */
+
+:root{
+    --primary-text: #0d6efd;
+    --primary-bg: #031634;
+    --secondary-text: #aeb1b6;
+    --secondary-bg: #353a40;
+    --dark-text: #212429;
+    --dark-bg: #191d20;
+    --light-text: #f8f9fb;
+    --light-bg: #353a40;
+    --danger-text: #dc3546;
+    --danger-bg: #2b0b0e;
+    --warning-text: #fec007;
+    --warning-lor-bg: #332701;
+    --success-text: #188754;
+    --success-bg: #051a11;
+    --info-text: #0dcaf0;
+    --info-bg: #032830;
+
+    --text-sm: 0.6rem;
+    --text-md: 1rem;
+    --text-lg: 1.5rem;
+    --text-xl: 2rem;
+
+    --border-radius: 5px;
+
+    --box-shadow: ;
+}
+
+
+/* ESTILOS */
+
+body{
+    text-align: center;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    justify-items: center;
+    gap: 10px;
+}
+
+header, footer{
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+main{
+    max-width: 800px;
+    height: fit-content;
+    background-color: var(--light-text);
+    border: var(--light-bg) solid 1px;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form{
+    display: grid;
+    grid-template-rows: repeat(3, minmax(1fr, auto));
+    width: 100%;
+    margin: 10px 0;
+}
+
+label{
+    font-weight: bold;
+    text-justify: center;
+    text-align: center;
+    height: 100%;
+}
+
+.containerImpForm{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 1fr));
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+}
+
+div>input{
+    height: 40px;
+    border-radius: var(--border-radius);
+    border: var(--secondary-text) solid 1px;
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.boxContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.btnSuccess{
+    height: 40px;
+    width: 200px;
+    font-weight: bold;
+    border: solid var(--light-bg) 1px;
+    background-color: var(--success-text);
+    border-radius: var(--border-radius);
+    color: var(--light-text);
+    cursor: pointer;
+    transition: ease-in-out 200ms;
+}
+
+table{
+    width: 100%;
+    padding: 10px;
+    border: var(--dark-bg) solid 1px;
+    border-collapse: collapse;
+    text-wrap: nowrap;
+}
+
+caption{
+    border: solid var(--dark-bg) 1px;
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    font-weight: bold;
+}
+
+td, th{
+    border: var(--dark-bg) solid 1px;
+    padding: 2px 5px;
+    width: min-content;
+}
+
+th{
+    color: var(--light-text);
+    background-color: var(--primary-text);
+}
+
+tfoot>tr>td{
+    background-color: var(--secondary-bg);
+    color: var(--light-text);
+    font-weight: bold;
+}
+
+td>fieldset{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-style: none;
+    border-radius: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 5px;
+}
+
+.tableResult{
+    text-align: center;
+    max-width: 100px;
+    border: none;
+    color: var(--dark-bg);
+}
+
+.checkBut{
+    background-color: #031634;
+    height: 100%;
+    width: auto;
+}
+
+
+.btnAct{
+    max-width: 50px;
+    height: 30px;
+    font-size: var(--text-sm);
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.btnEdit{
+    background-color: var(--light-text);
+    border: solid var(--success-bg) 1px;
+    color: var(--success-text);
+}
+
+.btnDelete{
+    background-color: var(--light-text);
+    border: solid var(--danger-bg) 1px;
+    color: var(--danger-text);
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media(width <= 800px){
+    body, main, header, footer{
+        max-width: 800px;
+    }
+
+    label{
+        font-size: var(--text-sm);
+    }
+
+    .inpData{
+        max-width: 100px;
+        font-size: var(--text-sm);
+        text-align: center;
+        height: 30px;
+    }
+
+    table{
+        font-size: var(--text-sm)
+    }
+
+    .btn{
+        width: 120px;
+        height: 30px;
+        font-size: var(--text-sm);
+    }
+
+    .checkBut{
+        max-width: 10px;
+    }
+    
+}
+
+/* Animaciones */
+
+.btnEdit:hover{
+    border: solid var(--light-text) 1px;
+    background-color: var(--success-text);
+    color: var(--light-text);
+    transition: ease-in-out 200ms;
+}
+
+.btnDelete:hover{
+    border: solid var(--light-text) 1px;
+    background-color: var(--danger-text);
+    color: var(--light-text);
+    transition: ease-in-out 200ms;
+}
