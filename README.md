@@ -19,7 +19,7 @@ En este proyecto ponemos a prueba lo aprendido en PHP para realizar una pagina t
 - 07: GIT - Repositorio.
 - 08: Readme - informativo.
 
-# ** Consulta para base de datos **
+# ** Consulta para crear la base de datos **
 
 drop database to_do_list_php;
 create database to_do_list_php;
