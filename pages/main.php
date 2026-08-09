@@ -56,8 +56,11 @@
         <tbody id="contentList">
             <!-- SE LLAMA LA FUNCION loadTask PARA MOSTRAR LOS REGISTROS EN LA TABLA DEL DOM -->
             <?php 
-                $datos = loadTask($conn);
+                $idUser = $_SESSION['UserOk']['Id'];
+                $datos = loadTask($conn, $idUser);
+                
                 foreach($datos as $data){
+                    
                     // GUARDAMOS LOS DATOS EN VARIABLES PARA CADA ITERACION //
                     $id = $data["Id"];
                     $prod = $data["Producto"];

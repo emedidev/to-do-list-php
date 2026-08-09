@@ -44,7 +44,8 @@ ul, ol{
     --danger-bg: #2b0b0e;
     --danger-border: #80212a;
     --warning-text: #fec007;
-    --warning-lor-bg: #332701;
+    --warning-bg-transp: #fec0079f;
+    --warning-lor-bg: #070706;
     --warning-lor-border: #9b7206;
     --success-text: #188754;
     --success-bg-transp: #1887549f;
@@ -352,24 +353,26 @@ input:focus-visible, input:active{
     height: fit-content;
     border: var(--danger-border) solid 1px;
     background-color: var(--danger-bg-transp);
+    color: var(--danger-border);
 }
 
-.messageError > p{
-    margin: 5px;
-    font-weight: bold;
-    color: var(--danger-border);
-    text-align: center;
-}
 
 .messageSuccess{
     height: fit-content;
     border: var(--success-border) solid 1px;
     background-color: var(--success-bg-transp);
+    color: var(--success-border);
 }
 
-.messageSuccess > p{
+.messageWarning{
+    height: fit-content;
+    border: var(--warning-border) solid 1px;
+    background-color: var(--warning-bg-transp);
+    color: var(--warning-lor-border);
+}
+
+.messageError > p, .messageSuccess > p, .messageWarning > p{
     margin: 5px;
     font-weight: bold;
-    color: var(--success-border);
     text-align: center;
 }

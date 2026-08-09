@@ -16,14 +16,24 @@
         <?php 
             session_start();
             if(isset($_SESSION['MessageSuccess'])){
-                ?> <section class="messageSuccess">
+                ?> 
+                    <section class="messageSuccess">
                         <p>
                             <?php echo $_SESSION['MessageSuccess'];;?>
                         </p>
                     </section>
                 <?php
-                session_destroy();
             };
+            if(isset($_SESSION['MessageWarning'])){
+                ?> 
+                    <section class="messageWarning">
+                        <p>
+                            <?php echo $_SESSION['MessageWarning'];;?>
+                        </p>
+                    </section>
+                <?php
+            };
+            session_destroy();
         ?>
         <form action="../auth/auth-login.php" method="post" id="formLogin">
             <header>

@@ -2,21 +2,25 @@
 
 require __DIR__.'/../db/conn.php';
 
+session_start();
+
 if(isset($_POST['User'])){
     
-    $user = $_POST['userName'];
-    $pass = md5($_POST['userPass']);
-    
-    if(!isset($_POST['userName'])){
+    if(empty($_POST['userName']) or empty($_POST['userPass'])){
         header('Location: ../index.php');
+        $_SESSION['MessageWarning'] = 'No registro el usuario o contraseña.';
         exit();
     };
 
+    $user = $_POST['userName'];
+    $pass = md5($_POST['userPass']);
+    
     $result =  validate($conn, $user, $pass);
     $fetch = mysqli_fetch_assoc($result);
     
-    if(!isset($fetch)){
+    if(!isset($fetch) or $fetch['Email'] !== $user or $fetch['Contraseña'] !== $pass){
         header('Location: ../index.php');
+        $_SESSION['MessageWarning'] = 'Usuario o contraseña incorrecto.';
         exit();
         
     };
