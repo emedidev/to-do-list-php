@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
-    <script src="script.js?v=1.0.5"></script>
-    <link rel="stylesheet" href="app.style.css?v=1.0.4">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="./css/app.style.css?v=1.0.4">
 </head>
 <body>
     <header>

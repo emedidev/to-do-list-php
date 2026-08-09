@@ -1,6 +1,6 @@
 
 <!-- LLAMADA AL HEADER -->
-<?php require "./includes/header.php" ?>
+<?php require_once "./includes/header.php" ?>
 
 <main>
     
@@ -8,19 +8,15 @@
         session_start();
         
         if(!isset($_SESSION['UserOk'])){
-             require "./pages/login.php";
-             require './pages/register.php';
-             exit();
+                header('Location: ./pages/login.php');
             };
 
         if(isset($_SESSION['UserOk'])){
-            require './pages/main.php';
+            require_once './pages/main.php';
         };
-
-
-        ?>
-            
-    </main>
+    ?>
+        
+</main>
 
     <!-- LLAMADA AL FOOTER -->
-<?php include "./includes/footer.php" ?>
+<?php include_once "./includes/footer.php" ?>
