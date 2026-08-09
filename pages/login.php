@@ -12,6 +12,7 @@
         <h3>Lista para compras</h3>
     </header>
 
+    <!-- SE CREA EL FORMULARIO DE LOGIN, INICIAMOS LA SESSION Y MOSTRAMOS DATOS DEL USUARIO EN LA INTERFAZ -->
     <fieldset class="formContainer" id="ContainerLogin">
         <?php 
             session_start();

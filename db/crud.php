@@ -5,9 +5,6 @@
 
     include __DIR__ . '/../db/conn.php';
 
-
-    
-
     /////////////////////////////////////////////////////////////////////////////////////////////////////
     // EVALIAMOS LA SOLICITUD DEL METODO PARA DEFINIR EL PROCESO A CORRER, EN ESTE CASO GUARDAR DATOS //
     if(isset($_POST['save-task'])){

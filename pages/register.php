@@ -11,6 +11,8 @@
         <h1>App To Do List PHP</h1>
         <h3>Lista para compras</h3>
     </header>
+
+    <!-- CREAMOS EL FORMULARIO DE REGISTRO Y MOSTRAMOS POR SESSION LOS DATOS DEL USUARIO Y MENSAJES DE ERROR -->
     <fieldset class="formContainer" id="ContainerRegister">
         <?php 
             session_start();
